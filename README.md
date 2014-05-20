@@ -12,12 +12,20 @@ copied them here.
 
 Notice most of the bindings emulate vim cursor movements.
 
+<img align="right" src="/screenshots/pane_navigation.gif" alt="pane navigation"/>
+
+<br/>
+
 **Navigation**
 
 - `h` - select pane on the left
 - `j` - select pane below the current one
 - `k` - select pane above
 - `l` - select pane on the right
+
+<br/><br/><br/><br/><br/>
+
+<img align="right" src="/screenshots/pane_resizing.gif" alt="pane resizing"/>
 
 **Resizing panes**
 
@@ -29,10 +37,18 @@ Notice most of the bindings emulate vim cursor movements.
 The amount of cells to resize can be configured with `@pane_resize` option. See
 [configuration section](#configuration) for the details.
 
+<br/><br/><br/>
+
+<img align="right" src="/screenshots/pane_splitting.gif" alt="pane splitting"/>
+
+<br/><br/>
+
 **Splitting panes**
 
 - `|` - split current pane horizontally
 - `-` - split current pane vertically
+
+<br/><br/><br/><br/><br/>
 
 ### Installation with [Tmux Plugin Manager](https://github.com/bruno-/tpm) (recommended)
 

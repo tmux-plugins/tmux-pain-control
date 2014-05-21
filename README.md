@@ -34,10 +34,12 @@ Notice most of the bindings emulate vim cursor movements.
 - `K` - resize 5 cells in the down direction
 - `L` - resize 5 cells to the right
 
+These mappings are `repeatable`.
+
 The amount of cells to resize can be configured with `@pane_resize` option. See
 [configuration section](#configuration) for the details.
 
-<br/><br/><br/>
+<br/><br/>
 
 <img align="right" src="/screenshots/pane_splitting.gif" alt="pane splitting"/>
 

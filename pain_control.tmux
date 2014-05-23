@@ -35,7 +35,6 @@ pane_resizing_bindings() {
 }
 
 pane_split_bindings() {
-    echo $PWD
     tmux bind-key "|" split-window -h -c "#{pane_current_path}"
     tmux bind-key "-" split-window -v -c "#{pane_current_path}"
 }

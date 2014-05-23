@@ -43,12 +43,14 @@ The amount of cells to resize can be configured with `@pane_resize` option. See
 
 <img align="right" src="/screenshots/pane_splitting.gif" alt="pane splitting"/>
 
-<br/><br/>
+<br/>
 
 **Splitting panes**
 
 - `|` - split current pane horizontally
 - `-` - split current pane vertically
+
+Newly created pane always has the same path as the original pane.
 
 <br/><br/><br/><br/><br/>
 

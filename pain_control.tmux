@@ -35,8 +35,8 @@ pane_resizing_bindings() {
 }
 
 pane_split_bindings() {
-    tmux bind-key "|" split-window -h
-    tmux bind-key "-" split-window -v
+    tmux bind-key "|" split-window -h -c "$PWD"
+    tmux bind-key "-" split-window -v -c "$PWD"
 }
 
 main() {

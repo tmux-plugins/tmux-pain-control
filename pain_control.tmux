@@ -35,12 +35,13 @@ pane_resizing_bindings() {
 }
 
 pane_split_bindings() {
-    tmux bind-key "|" split-window -h -c "$PWD"
-    tmux bind-key "-" split-window -v -c "$PWD"
+    echo $PWD
+    tmux bind-key "|" split-window -h -c "#{pane_current_path}"
+    tmux bind-key "-" split-window -v -c "#{pane_current_path}"
 }
 
 improve_new_window_binding() {
-    tmux bind-key "c" new-window -c "$PWD"
+    tmux bind-key "c" new-window -c "#{pane_current_path}"
 }
 
 main() {

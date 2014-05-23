@@ -39,9 +39,14 @@ pane_split_bindings() {
     tmux bind-key "-" split-window -v -c "$PWD"
 }
 
+improve_new_window_binding() {
+    tmux bind-key "c" new-window -c "$PWD"
+}
+
 main() {
     pane_navigation_bindings
     pane_resizing_bindings
     pane_split_bindings
+    improve_new_window_binding
 }
 main

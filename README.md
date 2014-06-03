@@ -93,5 +93,19 @@ Example:
 
     set-option -g @pane_resize "10"
 
+### Other plugins
+
+You might also find these useful:
+
+- [goto session](https://github.com/bruno-/tmux_goto_session) - faster session
+  switching
+- [battery osx](https://github.com/bruno-/tmux_battery_osx) - battery status
+  for OSX in Tmux `status-right`
+- [logging](https://github.com/bruno-/tmux_logging) - easy logging and
+  screen capturing
+- [online status](https://github.com/bruno-/tmux_online_status) - online status
+  indicator in Tmux `status-right`. Useful when on flaky connection to see if
+  you're online.
+
 ### License
 [MIT](LICENSE.md)

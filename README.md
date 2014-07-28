@@ -54,24 +54,24 @@ Newly created pane always has the same path as the original pane.
 
 <br/><br/><br/><br/><br/>
 
-### Installation with [Tmux Plugin Manager](https://github.com/bruno-/tpm) (recommended)
+### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
 
-    set -g @tpm_plugins "              \
-      bruno-/tpm                       \
-      bruno-/tmux_pain_control         \
+    set -g @tpm_plugins "                \
+      tmux-plugins/tpm                   \
+      tmux-plugins/tmux-pain-control     \
     "
 
 Hit `prefix + I` to fetch the plugin and source it.
 
-You should now have all `pain_control` bindings defined.
+You should now have all `pain-control` bindings defined.
 
 ### Manual Installation
 
 Clone the repo:
 
-    $ git clone https://github.com/bruno-/tmux_pain_control ~/clone/path
+    $ git clone https://github.com/tmux-plugins/tmux-pain-control ~/clone/path
 
 Add this line to the bottom of `.tmux.conf`:
 
@@ -82,7 +82,7 @@ Reload TMUX environment:
     # type this in terminal
     $ tmux source-file ~/.tmux.conf
 
-You should now have all `pain_control` bindings defined.
+You should now have all `pain-control` bindings defined.
 
 ### Configuration
 
@@ -97,15 +97,10 @@ Example:
 
 You might also find these useful:
 
-- [goto session](https://github.com/bruno-/tmux_goto_session) - faster session
+- [goto session](https://github.com/tmux-plugins/tmux-goto-session) - faster session
   switching
-- [battery osx](https://github.com/bruno-/tmux_battery_osx) - battery status
-  for OSX in Tmux `status-right`
-- [logging](https://github.com/bruno-/tmux_logging) - easy logging and
+- [logging](https://github.com/tmux-plugins/tmux-logging) - easy logging and
   screen capturing
-- [online status](https://github.com/bruno-/tmux_online_status) - online status
-  indicator in Tmux `status-right`. Useful when on flaky connection to see if
-  you're online.
 
 ### License
 [MIT](LICENSE.md)

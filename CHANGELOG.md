@@ -1,6 +1,7 @@
 # Changelog
 
 ### master
+- update readme to reflect github organization change
 
 ### v0.0.2, 2014-06-03
 - split-window bindings "|" and "-" now create a new pane with the same path as

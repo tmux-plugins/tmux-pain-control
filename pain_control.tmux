@@ -26,6 +26,11 @@ pane_navigation_bindings() {
 	tmux bind-key C-l select-pane -R
 }
 
+window_move_bindings() {
+	tmux bind-key -r M-h swap-window -t -1
+	tmux bind-key -r M-l swap-window -t +1
+}
+
 pane_resizing_bindings() {
 	local pane_resize=$(get_tmux_option "@pane_resize" "$default_pane_resize")
 	tmux bind-key -r H resize-pane -L "$pane_resize"

@@ -60,6 +60,11 @@ Newly created pane always has the same path as the original pane.
 
 <br/><br/><br/><br/><br/>
 
+**Swapping windows**
+
+- `prefix + alt + h` - moves current window one position to the left
+- `prefix + alt + l` - moves current window one position to the right
+
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:

@@ -4,6 +4,7 @@
 - update readme to reflect github organization change
 - update readme - more precise binding definition
 - switch to tab indentation
+- add swap-window bindings
 
 ### v0.0.2, 2014-06-03
 - split-window bindings "|" and "-" now create a new pane with the same path as

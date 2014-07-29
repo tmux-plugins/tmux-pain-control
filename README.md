@@ -18,10 +18,10 @@ Notice most of the bindings emulate vim cursor movements.
 
 **Navigation**
 
-- `h` - select pane on the left
-- `j` - select pane below the current one
-- `k` - select pane above
-- `l` - select pane on the right
+- `prefix + h` - select pane on the left
+- `prefix + j` - select pane below the current one
+- `prefix + k` - select pane above
+- `prefix + l` - select pane on the right
 
 <br/><br/><br/><br/><br/>
 
@@ -29,10 +29,10 @@ Notice most of the bindings emulate vim cursor movements.
 
 **Resizing panes**
 
-- `H` - resize current pane 5 cells to the left
-- `J` - resize 5 cells in the up direction
-- `K` - resize 5 cells in the down direction
-- `L` - resize 5 cells to the right
+- `prefix + shift + h` - resize current pane 5 cells to the left
+- `prefix + shift + j` - resize 5 cells in the up direction
+- `prefix + shift + k` - resize 5 cells in the down direction
+- `prefix + shift + l` - resize 5 cells to the right
 
 These mappings are `repeatable`.
 
@@ -47,8 +47,8 @@ The amount of cells to resize can be configured with `@pane_resize` option. See
 
 **Splitting panes**
 
-- `|` - split current pane horizontally
-- `-` - split current pane vertically
+- `prefix + |` - split current pane horizontally
+- `prefix + -` - split current pane vertically
 
 Newly created pane always has the same path as the original pane.
 

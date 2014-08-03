@@ -108,8 +108,8 @@ Example:
 
 You might also find these useful:
 
-- [goto session](https://github.com/tmux-plugins/tmux-goto-session) - faster session
-  switching
+- [sessionist](https://github.com/tmux-plugins/tmux-sessionist) - lightweight
+  tmux utils for switching and creating sessions
 - [logging](https://github.com/tmux-plugins/tmux-logging) - easy logging and
   screen capturing
 

@@ -27,8 +27,8 @@ pane_navigation_bindings() {
 }
 
 window_move_bindings() {
-	tmux bind-key -r M-h swap-window -t -1
-	tmux bind-key -r M-l swap-window -t +1
+	tmux bind-key -r "<" swap-window -t -1
+	tmux bind-key -r ">" swap-window -t +1
 }
 
 pane_resizing_bindings() {

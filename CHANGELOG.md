@@ -1,6 +1,8 @@
 # Changelog
 
 ### master
+
+### v1.0.0, 2014-08-30
 - update readme to reflect github organization change
 - update readme - more precise binding definition
 - switch to tab indentation

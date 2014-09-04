@@ -25,7 +25,14 @@ Notice most of the bindings emulate vim cursor movements.
 - `prefix + l`<br/>
   select pane on the right
 
-<br/><br/><br/><br/><br/>
+<br/>
+
+**Note**: This overrides tmux's default binding for toggling between last
+active windows, `prefix + l`.
+[tmux-sensible](https://github.com/tmux-plugins/tmux-sensible) gives you
+a better binding for that, `prefix + a` (if your prefix is `C-a`).
+
+<br/><br/>
 
 <img align="right" src="/screenshots/pane_resizing.gif" alt="pane resizing"/>
 

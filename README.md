@@ -76,10 +76,7 @@ Newly created pane always has the same path as the original pane.
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
 
-    set -g @tpm_plugins "                \
-      tmux-plugins/tpm                   \
-      tmux-plugins/tmux-pain-control     \
-    "
+    set -g @plugin 'tmux-plugins/tmux-pain-control'
 
 Hit `prefix + I` to fetch the plugin and source it.
 

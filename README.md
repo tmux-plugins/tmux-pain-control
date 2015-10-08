@@ -8,6 +8,8 @@ This plugin hopefully makes them more available and "more standard".
 Thanks to the Tmux community for "inventing" these bindings. I've merely just
 copied them here.
 
+Tested and working on Linux, OSX and Cygwin.
+
 ### Bindings
 
 Notice most of the bindings emulate vim cursor movements.

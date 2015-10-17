@@ -67,6 +67,9 @@ The amount of cells to resize can be configured with `@pane_resize` option. See
 
 Newly created pane always has the same path as the original pane.
 
+The bindings can be configured with `@split_v_binding` and `@split_h_binding`
+options. See [configuration section](#configuration) for the details.
+
 <br/><br/><br/><br/><br/>
 
 **Swapping windows**
@@ -109,6 +112,14 @@ resize bindings. "5" is the default.
 Example:
 
     set-option -g @pane_resize "10"
+
+You can also set `@split_v_binding` and `@split_h_binding` to change the way
+of creating vertical and horizontal splits.
+
+For example, if you want to use the same bindings as vim:
+
+    set -g @split_v_binding "s"
+    set -g @split_h_binding "v"
 
 ### Other plugins
 

@@ -2,6 +2,7 @@
 
 ### master
 - update readme - write all keybindings
+- override default split window key bindings
 
 ### v1.0.0, 2014-08-30
 - update readme to reflect github organization change

@@ -114,6 +114,13 @@ Example:
 
     set-option -g @pane_resize "10"
 
+
+You can set `@new_window_path` Tmux option to false to disable creation of new windows with the starting path of the current pane. "true" is the default.
+
+Example:
+
+    set-option -g @new_window_path "false"
+
 ### Other plugins
 
 You might also find these useful:

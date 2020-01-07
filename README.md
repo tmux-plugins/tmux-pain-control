@@ -80,6 +80,8 @@ Newly created pane always has the same path as the original pane.
 - `prefix + <` - moves current window one position to the left
 - `prefix + >` - moves current window one position to the right
 
+These mappings are `repeatable`.
+
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:

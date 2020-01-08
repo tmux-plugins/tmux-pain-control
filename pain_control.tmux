@@ -27,8 +27,15 @@ pane_navigation_bindings() {
 }
 
 window_move_bindings() {
-	tmux bind-key -r "<" swap-window -d -t -1
-	tmux bind-key -r ">" swap-window -d -t +1
+	# V3.0 changed the way tmux handles focus in swap-window. -d is now
+	# required to keep focus on the current window.
+	if [ "$(tmux -V | cut -d' ' -f2)" ">" 3.0 ]; then
+		tmux bind-key -r "<" swap-window -d -t -1
+		tmux bind-key -r ">" swap-window -d -t +1
+	else
+		tmux bind-key -r "<" swap-window -t -1
+		tmux bind-key -r ">" swap-window -t +1
+	fi
 }
 
 pane_resizing_bindings() {

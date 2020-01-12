@@ -29,7 +29,7 @@ pane_navigation_bindings() {
 window_move_bindings() {
 	# V3.0 changed the way tmux handles focus in swap-window. -d is now
 	# required to keep focus on the current window.
-	if [ "$(tmux -V | cut -d' ' -f2)" ">" 3.0 ]; then
+	if (( $(echo "$(tmux -V | grep -Eo "[0-9]+\.[0-9]+") >= 3.0" | bc -l) )); then
 		tmux bind-key -r "<" swap-window -d -t -1
 		tmux bind-key -r ">" swap-window -d -t +1
 	else

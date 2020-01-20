@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 default_pane_resize="5"
+default_new_window_path="true"
 
 # tmux show-option "q" (quiet) flag does not set return value to 1, even though
 # the option does not exist. This function patches that.
@@ -49,7 +50,11 @@ pane_split_bindings() {
 }
 
 improve_new_window_binding() {
-	tmux bind-key "c" new-window -c "#{pane_current_path}"
+	local args=()
+	if [ $(get_tmux_option "@new_window_path" "$default_new_window_path") = "true" ]; then
+		args=(-c "#{pane_current_path}")
+	fi
+	tmux bind-key "c" new-window "${args[@]}"
 }
 
 main() {

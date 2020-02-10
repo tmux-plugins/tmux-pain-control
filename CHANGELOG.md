@@ -3,6 +3,8 @@
 ### master
 - update readme - write all keybindings
 - override default split window key bindings
+- Moving windows follows current window, compensate for change in behavior in
+  tmux 3.0
 
 ### v1.0.0, 2014-08-30
 - update readme to reflect github organization change

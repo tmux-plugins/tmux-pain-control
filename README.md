@@ -27,8 +27,6 @@ Notice most of the bindings emulate vim cursor movements.
 - `prefix + l` and `prefix + C-l`<br/>
   select pane on the right
 
-These mappings are `repeatable`.
-
 <br/>
 
 **Note**: This overrides tmux's default binding for toggling between last

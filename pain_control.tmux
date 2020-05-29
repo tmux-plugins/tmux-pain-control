@@ -28,11 +28,11 @@ bind_key() {
 
 	for dis_key in "${disabled_keys[@]}"
 	do
-	  if [[ "$dis_key" == "$key" ]]
-	  then
-	    # The user disabled the mapping of this key
-	    return
-	  fi
+		if [[ "$dis_key" == "$key" ]]
+		then
+			# The user disabled the mapping of this key
+			return
+		fi
 	done
 	bind_key "$@"
 }

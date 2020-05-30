@@ -16,8 +16,8 @@ get_tmux_option() {
 }
 
 bind_key() {
-	local disabled_keys
 	local dis_key
+	local disabled_keys
 	local key
 
 	key="$1"

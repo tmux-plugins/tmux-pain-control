@@ -24,7 +24,7 @@ bind_key() {
 
 	disabled_keys=$(get_tmux_option "@disabled_keys" "")
 	# comma-separated list to array
-	IFS=',' read -r -a disabled_keys <<< "$disabled_keys"
+	read -r -a disabled_keys <<< "${disabled_keys//,/ }"
 
 	for dis_key in "${disabled_keys[@]}"
 	do

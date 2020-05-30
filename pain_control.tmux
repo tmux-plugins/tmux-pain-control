@@ -34,7 +34,7 @@ bind_key() {
 			return
 		fi
 	done
-	bind_key "$@"
+	tmux bind-key "$@"
 }
 
 pane_navigation_bindings() {

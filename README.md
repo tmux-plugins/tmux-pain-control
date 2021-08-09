@@ -61,13 +61,13 @@ The amount of cells to resize can be configured with `@pane_resize` option. See
 **Splitting panes**
 
 - `prefix + |`<br/>
-  split current pane horizontally
+  split the current pane into two, left and right.
 - `prefix + -`<br/>
-  split current pane vertically
+  split the current pane into two, top and bottom.
 - `prefix + \`<br/>
-  split current pane full width horizontally
+  split current pane full width into two, left and right.
 - `prefix + _`<br/>
-  split current pane full width vertically
+  split current pane full height into two, top and bottom.
 
 Newly created pane always has the same path as the original pane.
 

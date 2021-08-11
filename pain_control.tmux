@@ -60,7 +60,6 @@ improve_new_window_binding() {
 }
 
 main() {
-	pane_break_bindings
 	pane_navigation_bindings
 	window_move_bindings
 	pane_resizing_bindings

@@ -56,6 +56,7 @@ pane_split_bindings() {
 
 improve_new_window_binding() {
 	tmux bind-key "c" new-window -c "#{pane_current_path}"
+	tmux bind-key C-c new-session
 }
 
 main() {

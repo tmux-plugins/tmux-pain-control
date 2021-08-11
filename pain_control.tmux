@@ -24,6 +24,12 @@ pane_navigation_bindings() {
 	tmux bind-key C-k select-pane -U
 	tmux bind-key l   select-pane -R
 	tmux bind-key C-l select-pane -R
+	
+	# Use Alt-arrow keys without prefix key to switch panes
+	tmux bind -n M-Left select-pane -L
+	tmux bind -n M-Right select-pane -R
+	tmux bind -n M-Up select-pane -U
+	tmux bind -n M-Down select-pane -D
 }
 
 window_move_bindings() {

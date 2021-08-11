@@ -53,13 +53,18 @@ pane_split_bindings() {
 	tmux bind-key "%" split-window -h -c "#{pane_current_path}"
 	tmux bind-key '"' split-window -v -c "#{pane_current_path}"
 }
+pane_break_bindings(){
+	tmux bind-key j command-prompt -p "join pane from:"  "join-pane -s '%%'"
+	tmux bind-key s command-prompt -p "send pane to:"  "join-pane -t '%%'"
 
+}
 improve_new_window_binding() {
 	tmux bind-key "c" new-window -c "#{pane_current_path}"
 	tmux bind-key C-c new-session
 }
 
 main() {
+	pane_break_bindings
 	pane_navigation_bindings
 	window_move_bindings
 	pane_resizing_bindings

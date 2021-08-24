@@ -114,6 +114,17 @@ Example:
 
     set-option -g @pane_resize "10"
 
+To disable certain keys from being mapped by this plugin you can set
+`@disabled_keys` to a comma-separated list of keys. It is empty by default, ie.
+all keys will be mapped.
+
+Examples:
+
+    # Disable | mapping
+    set-options -g @disabled_keys "|"
+    # Disable mapping of H, J, K and L
+    set-options -g @disabled_keys "H,J,K,L"
+
 ### Other plugins
 
 You might also find these useful:

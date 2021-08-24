@@ -15,41 +15,63 @@ get_tmux_option() {
 	fi
 }
 
+bind_key() {
+	local dis_key
+	local disabled_keys
+	local key
+
+	key="$1"
+
+	disabled_keys=$(get_tmux_option "@disabled_keys" "")
+	# comma-separated list to array
+	read -r -a disabled_keys <<< "${disabled_keys//,/ }"
+
+	for dis_key in "${disabled_keys[@]}"
+	do
+		if [[ "$dis_key" == "$key" ]]
+		then
+			# The user disabled the mapping of this key
+			return
+		fi
+	done
+	tmux bind-key "$@"
+}
+
 pane_navigation_bindings() {
-	tmux bind-key h   select-pane -L
-	tmux bind-key C-h select-pane -L
-	tmux bind-key j   select-pane -D
-	tmux bind-key C-j select-pane -D
-	tmux bind-key k   select-pane -U
-	tmux bind-key C-k select-pane -U
-	tmux bind-key l   select-pane -R
-	tmux bind-key C-l select-pane -R
+	bind_key h   select-pane -L
+	bind_key C-h select-pane -L
+	bind_key j   select-pane -D
+	bind_key C-j select-pane -D
+	bind_key k   select-pane -U
+	bind_key C-k select-pane -U
+	bind_key l   select-pane -R
+	bind_key C-l select-pane -R
 }
 
 window_move_bindings() {
-	tmux bind-key -r "<" swap-window -d -t -1
-	tmux bind-key -r ">" swap-window -d -t +1
+	bind_key -r "<" swap-window -d -t -1
+	bind_key -r ">" swap-window -d -t +1
 }
 
 pane_resizing_bindings() {
 	local pane_resize=$(get_tmux_option "@pane_resize" "$default_pane_resize")
-	tmux bind-key -r H resize-pane -L "$pane_resize"
-	tmux bind-key -r J resize-pane -D "$pane_resize"
-	tmux bind-key -r K resize-pane -U "$pane_resize"
-	tmux bind-key -r L resize-pane -R "$pane_resize"
+	bind_key -r H resize-pane -L "$pane_resize"
+	bind_key -r J resize-pane -D "$pane_resize"
+	bind_key -r K resize-pane -U "$pane_resize"
+	bind_key -r L resize-pane -R "$pane_resize"
 }
 
 pane_split_bindings() {
-	tmux bind-key "|" split-window -h -c "#{pane_current_path}"
-	tmux bind-key "\\" split-window -fh -c "#{pane_current_path}"
-	tmux bind-key "-" split-window -v -c "#{pane_current_path}"
-	tmux bind-key "_" split-window -fv -c "#{pane_current_path}"
-	tmux bind-key "%" split-window -h -c "#{pane_current_path}"
-	tmux bind-key '"' split-window -v -c "#{pane_current_path}"
+	bind_key "|" split-window -h -c "#{pane_current_path}"
+	bind_key "\\" split-window -fh -c "#{pane_current_path}"
+	bind_key "-" split-window -v -c "#{pane_current_path}"
+	bind_key "_" split-window -fv -c "#{pane_current_path}"
+	bind_key "%" split-window -h -c "#{pane_current_path}"
+	bind_key '"' split-window -v -c "#{pane_current_path}"
 }
 
 improve_new_window_binding() {
-	tmux bind-key "c" new-window -c "#{pane_current_path}"
+	bind_key "c" new-window -c "#{pane_current_path}"
 }
 
 main() {

@@ -50,6 +50,7 @@ pane_split_bindings() {
 
 improve_new_window_binding() {
 	tmux bind-key "c" new-window -c "#{pane_current_path}"
+	tmux bind-key "e" new-window -ac "#{pane_current_path}" # new-window (hEre)
 }
 
 main() {
